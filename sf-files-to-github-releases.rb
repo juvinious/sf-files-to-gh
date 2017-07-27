@@ -43,7 +43,7 @@ end
 
 def get_settings()
   settings = {
-    'files' => 'https://sourceforge.net/projects/paintown/rss?path=/',
+    'files' => '',
     'manifest' => CONFIG_DIR + 'manifest.json',
     'release_manifest' => CONFIG_DIR + 'releases.json',
     'file_manifest' => CONFIG_DIR + 'files.json',
