@@ -288,7 +288,7 @@ def create_releases(settings)
       r = RestClient.post api_str, release.to_json, headers
       response = JSON.parse(r.body)
       releases[name] = response
-    rescue RestClient::Unauthorized, RestClient::Forbidden => e
+    rescue RestClient::Unauthorized, RestClient::Forbidden, RestClient::NotFound => e
       puts "Error connecting! Please check your oauth_token and/or user and repo.".red
       puts "Message: ".green + e.message
       puts "Response: ".green + JSON.pretty_generate(JSON.parse(e.response))
